@@ -16,7 +16,9 @@ runParallel snappyHexMesh -overwrite
 reconstructParMesh -constant -mergeTol 1E-06 > log.reconstructParMesh
 #autoPatch and scaling 
 transformPoints -scale '(0.01 0.01 0.01)'
-autoPatch -overwrite 75 
+autoPatch -overwrite 75
+#I use the createPatch to rename the patches 
+createPatch -dict system/createPatchDict_autopatch -overwrite 
 
 touch snappy_pipe.foam
 
