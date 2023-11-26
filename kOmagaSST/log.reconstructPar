@@ -8,10 +8,10 @@
 Build  : _76d719d1-20220624 OPENFOAM=2206 version=2206
 Arch   : "LSB;label=32;scalar=64"
 Exec   : reconstructPar
-Date   : Nov 23 2023
-Time   : 13:34:06
+Date   : Nov 26 2023
+Time   : 08:39:03
 Host   : MSI
-PID    : 11785
+PID    : 2285
 I/O    : uncollated
 Case   : /home/baqer/Git-hub-OpenFoam/inter-plus/kOmagaSST
 nProcs : 1
@@ -27,7 +27,7 @@ Create time
 Reconstructing fields
 region=region0
 
-Time = 1
+Time = 0.1
 
 Reconstructing FV fields
 
@@ -41,6 +41,119 @@ Reconstructing FV fields
     Reconstructing volVectorFields
 
         U
+        wallShearStress
+
+    Reconstructing surfaceScalarFields
+
+        phi
+
+Reconstructing point fields
+
+No point fields
+
+No lagrangian fields
+
+No FA fields
+
+Time = 0.2
+
+Reconstructing FV fields
+
+    Reconstructing volScalarFields
+
+        k
+        nut
+        omega
+        p
+
+    Reconstructing volVectorFields
+
+        U
+        wallShearStress
+
+    Reconstructing surfaceScalarFields
+
+        phi
+
+Reconstructing point fields
+
+No point fields
+
+No lagrangian fields
+
+No FA fields
+
+Time = 0.3
+
+Reconstructing FV fields
+
+    Reconstructing volScalarFields
+
+        k
+        nut
+        omega
+        p
+
+    Reconstructing volVectorFields
+
+        U
+        wallShearStress
+
+    Reconstructing surfaceScalarFields
+
+        phi
+
+Reconstructing point fields
+
+No point fields
+
+No lagrangian fields
+
+No FA fields
+
+Time = 0.4
+
+Reconstructing FV fields
+
+    Reconstructing volScalarFields
+
+        k
+        nut
+        omega
+        p
+
+    Reconstructing volVectorFields
+
+        U
+        wallShearStress
+
+    Reconstructing surfaceScalarFields
+
+        phi
+
+Reconstructing point fields
+
+No point fields
+
+No lagrangian fields
+
+No FA fields
+
+Time = 0.5
+
+Reconstructing FV fields
+
+    Reconstructing volScalarFields
+
+        k
+        nut
+        omega
+        p
+
+    Reconstructing volVectorFields
+
+        U
+        wallShearStress
 
     Reconstructing surfaceScalarFields
 
