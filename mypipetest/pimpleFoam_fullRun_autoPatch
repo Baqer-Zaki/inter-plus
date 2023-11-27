@@ -1,0 +1,24 @@
+#!/bin/sh
+cd ${0%/*} || exit 1                        # Run from this directory
+. $WM_PROJECT_DIR/bin/tools/RunFunctions    # Tutorial run functions           
+#------------------------------------------------------------------------------
+./Allclean
+fluent3DMeshToFoam pipe-mymesh.msh
+restore0Dir
+#I use the createPatch to rename the patches 
+runApplication createPatch -dict system/createPatchDict_autopatch -overwrite 
+
+touch snappy_pipe.foam
+rm -r log.pimpleFoam
+# here run parallel 
+# now we run it together with pimpleFoam
+# #
+ 
+#Step-1 now we will decompose parallel
+runApplication decomposePar
+#Step 2 now we run our solver in parallel
+runParallel pimpleFoam
+
+#Step 3 now we need to reconstruct
+runApplication reconstructPar
+ 
