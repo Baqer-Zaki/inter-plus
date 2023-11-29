@@ -22,41 +22,41 @@ FoamFile
     {
         type            patch;
         nFaces          0;
-        startFace       13965;
+        startFace       45696;
     }
     topPatch
     {
         type            patch;
         nFaces          0;
-        startFace       13965;
+        startFace       45696;
     }
     wall
     {
         type            patch;
-        nFaces          2138;
-        startFace       13965;
+        nFaces          2128;
+        startFace       45696;
     }
-    procBoundary3to1
+    procBoundary3to0
     {
         type            processor;
         inGroups        1(processor);
-        nFaces          68;
-        startFace       16103;
+        nFaces          208;
+        startFace       47824;
         matchTolerance  0.0001;
         transform       unknown;
         myProcNo        3;
-        neighbProcNo    1;
+        neighbProcNo    0;
     }
-    procBoundary3to4
+    procBoundary3to5
     {
         type            processor;
         inGroups        1(processor);
-        nFaces          76;
-        startFace       16171;
+        nFaces          208;
+        startFace       48032;
         matchTolerance  0.0001;
         transform       unknown;
         myProcNo        3;
-        neighbProcNo    4;
+        neighbProcNo    5;
     }
 )
 

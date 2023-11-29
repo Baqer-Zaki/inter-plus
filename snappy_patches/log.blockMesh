@@ -9,9 +9,9 @@ Build  : _76d719d1-20220624 OPENFOAM=2206 version=2206
 Arch   : "LSB;label=32;scalar=64"
 Exec   : blockMesh
 Date   : Nov 29 2023
-Time   : 12:03:03
+Time   : 16:52:06
 Host   : MSI
-PID    : 12147
+PID    : 22574
 I/O    : uncollated
 Case   : /home/baqer/Git-hub-OpenFoam/inter-plus/snappy_patches
 nProcs : 1
