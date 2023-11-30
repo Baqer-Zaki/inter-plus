@@ -128,10 +128,10 @@ castellatedMeshControls
     // This is a featureEdgeMesh, read from constant/triSurface for now.
     features
     (
-        //{
-        //    file "someLine.eMesh";
-        //    level 2;
-        //}
+        {
+            file "solid_stl.eMesh";
+            level 0;
+        }
     );
 
 
@@ -257,9 +257,9 @@ snapControls
     
     nFeatureSnapIter 10;
 
-    implicitFeatureSnap true;
+    implicitFeatureSnap false;
 
-    explicitFeatureSnap false;
+    explicitFeatureSnap true;
 
     multiRegionFeatureSnap false;
 
@@ -280,18 +280,18 @@ addLayersControls
     {
         "wall"
         {
-            nSurfaceLayers 5;
+            nSurfaceLayers 10;
         }
     }
 
     // Expansion factor for layer mesh
-    expansionRatio 1.3;
+    expansionRatio 1.2;
 
     // Wanted thickness of final added cell layer. If multiple layers
     // is the thickness of the layer furthest away from the wall.
     // Relative to undistorted size of cell outside layer.
     // See relativeSizes parameter.
-    finalLayerThickness 0.3;
+    finalLayerThickness 1;
 
     // Minimum thickness of cell layer. If for any reason layer
     // cannot be above minThickness do not add layer.

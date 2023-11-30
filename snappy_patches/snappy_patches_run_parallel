@@ -6,6 +6,7 @@ cd "${0%/*}" || exit                                # Run from this directory
 ./Allclean
 
 runApplication blockMesh
+runApplication surfaceFeatureExtract
 #step 1
 decomposePar > log.meshDecomposePar
 restore0Dir -processor
@@ -14,5 +15,11 @@ runParallel snappyHexMesh -overwrite
 
 #step 3
 reconstructParMesh -constant -mergeTol 1E-06 > log.reconstructParMesh
- 
+
+#mesh improvement 
+polyDualMesh 75 -overwrite
+
 touch snappy_pipe.foam
+
+
+

@@ -8,10 +8,10 @@
 Build  : _76d719d1-20220624 OPENFOAM=2206 version=2206
 Arch   : "LSB;label=32;scalar=64"
 Exec   : decomposePar
-Date   : Nov 29 2023
-Time   : 16:52:07
+Date   : Nov 30 2023
+Time   : 09:06:08
 Host   : MSI
-PID    : 22575
+PID    : 8299
 I/O    : uncollated
 Case   : /home/baqer/Git-hub-OpenFoam/inter-plus/snappy_patches
 nProcs : 1
@@ -31,7 +31,7 @@ Create mesh
 Calculating distribution of cells
 Decomposition method scotch [6] (region region0)
 
-Finished decomposition in 0.57 s
+Finished decomposition in 0.54 s
 
 Calculating original mesh data
 

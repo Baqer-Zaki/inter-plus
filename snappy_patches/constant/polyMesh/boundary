@@ -21,20 +21,20 @@ FoamFile
     bottomPatch
     {
         type            patch;
-        nFaces          220;
-        startFace       276072;
+        nFaces          397;
+        startFace       483756;
     }
     topPatch
     {
         type            patch;
-        nFaces          268;
-        startFace       276292;
+        nFaces          149;
+        startFace       484153;
     }
     wall
     {
         type            patch;
-        nFaces          12796;
-        startFace       276560;
+        nFaces          12888;
+        startFace       484302;
     }
 )
 

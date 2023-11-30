@@ -22,26 +22,26 @@ FoamFile
     {
         type            patch;
         nFaces          0;
-        startFace       46280;
+        startFace       77476;
     }
     topPatch
     {
         type            patch;
         nFaces          0;
-        startFace       46280;
+        startFace       77476;
     }
     wall
     {
         type            patch;
-        nFaces          2156;
-        startFace       46280;
+        nFaces          2128;
+        startFace       77476;
     }
     procBoundary5to3
     {
         type            processor;
         inGroups        1(processor);
-        nFaces          208;
-        startFace       48436;
+        nFaces          348;
+        startFace       79604;
         matchTolerance  0.0001;
         transform       unknown;
         myProcNo        5;
@@ -51,8 +51,8 @@ FoamFile
     {
         type            processor;
         inGroups        1(processor);
-        nFaces          224;
-        startFace       48644;
+        nFaces          348;
+        startFace       79952;
         matchTolerance  0.0001;
         transform       unknown;
         myProcNo        5;

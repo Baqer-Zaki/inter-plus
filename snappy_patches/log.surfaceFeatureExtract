@@ -1,0 +1,85 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2206                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _76d719d1-20220624 OPENFOAM=2206 version=2206
+Arch   : "LSB;label=32;scalar=64"
+Exec   : surfaceFeatureExtract
+Date   : Nov 30 2023
+Time   : 09:06:08
+Host   : MSI
+PID    : 8298
+I/O    : uncollated
+Case   : /home/baqer/Git-hub-OpenFoam/inter-plus/snappy_patches
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+
+Note: Feature line extraction only valid on closed manifold surfaces
+
+Reading surfaceFeatureExtractDict
+
+Surfaces     : solid_stl.stl
+Output       : solid_stl
+Load options : offset
+Write options: writeObj=yes writeVTK=off
+
+Statistics:
+Triangles    : 144 in 1 region(s)
+Vertices     : 74
+Bounding Box : (-0.005 -0.005 0) (0.005 0.005 0.4)
+
+Constructing feature set from included angle 150
+Selecting edges based purely on geometric tests: no
+
+Initial Feature set:
+    points : 0
+    edges  : 72
+    of which
+        region edges   : 0
+        external edges : 72
+        internal edges : 0
+
+Final Feature set:
+    points : 72
+    of which
+        convex             : 0
+        concave            : 0
+        mixed              : 0
+        non-feature        : 72
+    edges  : 72
+    of which
+        external edges     : 72
+        internal edges     : 0
+        flat edges         : 0
+        open edges         : 0
+        multiply connected : 0
+
+Writing extendedFeatureEdgeMesh to "/home/baqer/Git-hub-OpenFoam/inter-plus/snappy_patches/constant/extendedFeatureEdgeMesh/solid_stl.extendedFeatureEdgeMesh"
+
+Writing extendedEdgeMesh components to "/home/baqer/Git-hub-OpenFoam/inter-plus/snappy_patches/constant/extendedFeatureEdgeMesh/solid_stl"
+Writing 0 convex feature points to "/home/baqer/Git-hub-OpenFoam/inter-plus/snappy_patches/constant/extendedFeatureEdgeMesh/solid_stl_convexFeaturePts.obj"
+Writing 0 concave feature points to "/home/baqer/Git-hub-OpenFoam/inter-plus/snappy_patches/constant/extendedFeatureEdgeMesh/solid_stl_concaveFeaturePts.obj"
+Writing 0 mixed feature points to "/home/baqer/Git-hub-OpenFoam/inter-plus/snappy_patches/constant/extendedFeatureEdgeMesh/solid_stl_mixedFeaturePts.obj"
+Writing 0 mixed feature point structure to "/home/baqer/Git-hub-OpenFoam/inter-plus/snappy_patches/constant/extendedFeatureEdgeMesh/solid_stl_mixedFeaturePtsStructure.obj"
+Writing 72 external edges to "/home/baqer/Git-hub-OpenFoam/inter-plus/snappy_patches/constant/extendedFeatureEdgeMesh/solid_stl_externalEdges.obj"
+Writing 0 internal edges to "/home/baqer/Git-hub-OpenFoam/inter-plus/snappy_patches/constant/extendedFeatureEdgeMesh/solid_stl_internalEdges.obj"
+Writing 0 flat edges to "/home/baqer/Git-hub-OpenFoam/inter-plus/snappy_patches/constant/extendedFeatureEdgeMesh/solid_stl_flatEdges.obj"
+Writing 0 open edges to "/home/baqer/Git-hub-OpenFoam/inter-plus/snappy_patches/constant/extendedFeatureEdgeMesh/solid_stl_openEdges.obj"
+Writing 0 multiple edges to "/home/baqer/Git-hub-OpenFoam/inter-plus/snappy_patches/constant/extendedFeatureEdgeMesh/solid_stl_multipleEdges.obj"
+Writing 0 region edges to "/home/baqer/Git-hub-OpenFoam/inter-plus/snappy_patches/constant/extendedFeatureEdgeMesh/solid_stl_regionEdges.obj"
+Writing 72 edge directions to "/home/baqer/Git-hub-OpenFoam/inter-plus/snappy_patches/constant/extendedFeatureEdgeMesh/solid_stl_edgeDirections.obj"
+
+Writing featureEdgeMesh to "/home/baqer/Git-hub-OpenFoam/inter-plus/snappy_patches/constant/triSurface/solid_stl.eMesh"
+ExecutionTime = 0 s  ClockTime = 0 s
+
+End
+

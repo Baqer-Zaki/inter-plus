@@ -21,27 +21,27 @@ FoamFile
     bottomPatch
     {
         type            patch;
-        nFaces          0;
-        startFace       45808;
+        nFaces          360;
+        startFace       77620;
     }
     topPatch
     {
         type            patch;
-        nFaces          268;
-        startFace       45808;
+        nFaces          0;
+        startFace       77980;
     }
     wall
     {
         type            patch;
         nFaces          2128;
-        startFace       46076;
+        startFace       77980;
     }
     procBoundary4to5
     {
         type            processor;
         inGroups        1(processor);
-        nFaces          224;
-        startFace       48204;
+        nFaces          348;
+        startFace       80108;
         matchTolerance  0.0001;
         transform       unknown;
         myProcNo        4;
