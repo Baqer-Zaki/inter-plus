@@ -8,12 +8,12 @@
 Build  : _76d719d1-20220624 OPENFOAM=2206 version=2206
 Arch   : "LSB;label=32;scalar=64"
 Exec   : reconstructParMesh -constant -mergeTol 1E-06
-Date   : Nov 26 2023
-Time   : 08:04:06
+Date   : Dec 01 2023
+Time   : 11:59:50
 Host   : MSI
-PID    : 1168
+PID    : 26799
 I/O    : uncollated
-Case   : /home/baqer/Git-hub-OpenFoam/inter-plus/kOmagaSST
+Case   : /home/baqer/Git-hub-OpenFoam/inter-plus/simpleFoam_kOmagaSST
 nProcs : 1
 trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
 fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
@@ -34,12 +34,12 @@ Not well tested & use at your own risk!
 Merge assuming correct, fully matched procBoundaries.
 
 Found 6 processor directories
-    Reading database "kOmagaSST/processor0"
-    Reading database "kOmagaSST/processor1"
-    Reading database "kOmagaSST/processor2"
-    Reading database "kOmagaSST/processor3"
-    Reading database "kOmagaSST/processor4"
-    Reading database "kOmagaSST/processor5"
+    Reading database "simpleFoam_kOmagaSST/processor0"
+    Reading database "simpleFoam_kOmagaSST/processor1"
+    Reading database "simpleFoam_kOmagaSST/processor2"
+    Reading database "simpleFoam_kOmagaSST/processor3"
+    Reading database "simpleFoam_kOmagaSST/processor4"
+    Reading database "simpleFoam_kOmagaSST/processor5"
 
 Time = constant
 
@@ -49,48 +49,48 @@ Writing merged mesh to "constant/polyMesh"
 Reconstructing addressing from processor meshes to the newly reconstructed mesh
 
 Processor 0
-Read processor mesh: "kOmagaSST/processor0"
-Writing addressing : "kOmagaSST/processor0/constant/polyMesh"
+Read processor mesh: "simpleFoam_kOmagaSST/processor0"
+Writing addressing : "simpleFoam_kOmagaSST/processor0/constant/polyMesh"
     pointProcAddressing
     faceProcAddressing
     cellProcAddressing
     boundaryProcAddressing
 
 Processor 1
-Read processor mesh: "kOmagaSST/processor1"
-Writing addressing : "kOmagaSST/processor1/constant/polyMesh"
+Read processor mesh: "simpleFoam_kOmagaSST/processor1"
+Writing addressing : "simpleFoam_kOmagaSST/processor1/constant/polyMesh"
     pointProcAddressing
     faceProcAddressing
     cellProcAddressing
     boundaryProcAddressing
 
 Processor 2
-Read processor mesh: "kOmagaSST/processor2"
-Writing addressing : "kOmagaSST/processor2/constant/polyMesh"
+Read processor mesh: "simpleFoam_kOmagaSST/processor2"
+Writing addressing : "simpleFoam_kOmagaSST/processor2/constant/polyMesh"
     pointProcAddressing
     faceProcAddressing
     cellProcAddressing
     boundaryProcAddressing
 
 Processor 3
-Read processor mesh: "kOmagaSST/processor3"
-Writing addressing : "kOmagaSST/processor3/constant/polyMesh"
+Read processor mesh: "simpleFoam_kOmagaSST/processor3"
+Writing addressing : "simpleFoam_kOmagaSST/processor3/constant/polyMesh"
     pointProcAddressing
     faceProcAddressing
     cellProcAddressing
     boundaryProcAddressing
 
 Processor 4
-Read processor mesh: "kOmagaSST/processor4"
-Writing addressing : "kOmagaSST/processor4/constant/polyMesh"
+Read processor mesh: "simpleFoam_kOmagaSST/processor4"
+Writing addressing : "simpleFoam_kOmagaSST/processor4/constant/polyMesh"
     pointProcAddressing
     faceProcAddressing
     cellProcAddressing
     boundaryProcAddressing
 
 Processor 5
-Read processor mesh: "kOmagaSST/processor5"
-Writing addressing : "kOmagaSST/processor5/constant/polyMesh"
+Read processor mesh: "simpleFoam_kOmagaSST/processor5"
+Writing addressing : "simpleFoam_kOmagaSST/processor5/constant/polyMesh"
     pointProcAddressing
     faceProcAddressing
     cellProcAddressing

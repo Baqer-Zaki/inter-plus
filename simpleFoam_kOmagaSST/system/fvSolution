@@ -48,49 +48,41 @@ solvers
     }
 }
 
-PISO
+
+
+
+SIMPLE 
 {
-    nCorrectors     2;
-    nNonOrthogonalCorrectors 0;
-    pRefCell        0;
-    pRefValue       0;
-}
+	 nNonOrthogonalCorrectors 0;
+	 consistent yes;
+         residualControl
+	   {
+	    p               1e-2;
+	    U               1e-2;
+	    "(k|epsilon)" 1e-2;				     }
 
-// we add the PIMPLE CONTROL 
-   PIMPLE
-{
-       nNonOrthogonalCorrectors 1;
-       nCorrectors          1;
-       nOuterCorrectors    1;
-       pRefCell        0;
-       pRefValue       0;
+	  nCorrectors 1;
+	  nMaxIter 5;
+	  nRelaxationIterations 2;
+}	  
 
-       residualControl
-     {	
-	  U
-							                       {
-	         tolerance  1e-2;					         relTol      0;
-									      }
-	 p
-								            {
-									      tolerance  5e-1;
-	      relTol      0;
-									 }
- }
 
-}
 relaxationFactors
 {
-        fields
-	 {
-		 p      0.4;
-		 pFinal   1;
-         }
-	        equations
-	  {
-	    "(U|k|epsilon|omega|R|nuTilda)"     0.4;
-	    "(U|k|epsilon|omega|R|nuTilda)Final"   1;
-	  }
+    equations
+   {
+     U               0.9;
+     k               0.7;
+     omega           0.7;
+					       }
 }
+
+cache
+{
+	    grad(U);
+}
+
+
+
 
 // ************************************************************************* //

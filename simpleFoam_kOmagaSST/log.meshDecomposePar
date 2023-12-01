@@ -8,12 +8,12 @@
 Build  : _76d719d1-20220624 OPENFOAM=2206 version=2206
 Arch   : "LSB;label=32;scalar=64"
 Exec   : decomposePar
-Date   : Nov 26 2023
-Time   : 08:03:43
+Date   : Dec 01 2023
+Time   : 11:59:27
 Host   : MSI
-PID    : 1125
+PID    : 26757
 I/O    : uncollated
-Case   : /home/baqer/Git-hub-OpenFoam/inter-plus/kOmagaSST
+Case   : /home/baqer/Git-hub-OpenFoam/inter-plus/simpleFoam_kOmagaSST
 nProcs : 1
 trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
 fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
@@ -31,7 +31,7 @@ Create mesh
 Calculating distribution of cells
 Decomposition method scotch [6] (region region0)
 
-Finished decomposition in 0 s
+Finished decomposition in 0.01 s
 
 Calculating original mesh data
 
