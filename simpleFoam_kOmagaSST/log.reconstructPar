@@ -9,9 +9,9 @@ Build  : _76d719d1-20220624 OPENFOAM=2206 version=2206
 Arch   : "LSB;label=32;scalar=64"
 Exec   : reconstructPar
 Date   : Dec 01 2023
-Time   : 12:00:59
+Time   : 12:42:55
 Host   : MSI
-PID    : 26832
+PID    : 2334
 I/O    : uncollated
 Case   : /home/baqer/Git-hub-OpenFoam/inter-plus/simpleFoam_kOmagaSST
 nProcs : 1
@@ -83,7 +83,315 @@ No lagrangian fields
 
 No FA fields
 
-Time = 26
+Time = 30
+
+Reconstructing FV fields
+
+    Reconstructing volScalarFields
+
+        k
+        nut
+        omega
+        p
+
+    Reconstructing volVectorFields
+
+        U
+        wallShearStress
+
+    Reconstructing surfaceScalarFields
+
+        phi
+
+Reconstructing point fields
+
+No point fields
+
+No lagrangian fields
+
+No FA fields
+
+Time = 40
+
+Reconstructing FV fields
+
+    Reconstructing volScalarFields
+
+        k
+        nut
+        omega
+        p
+
+    Reconstructing volVectorFields
+
+        U
+        wallShearStress
+
+    Reconstructing surfaceScalarFields
+
+        phi
+
+Reconstructing point fields
+
+No point fields
+
+No lagrangian fields
+
+No FA fields
+
+Time = 50
+
+Reconstructing FV fields
+
+    Reconstructing volScalarFields
+
+        k
+        nut
+        omega
+        p
+
+    Reconstructing volVectorFields
+
+        U
+        wallShearStress
+
+    Reconstructing surfaceScalarFields
+
+        phi
+
+Reconstructing point fields
+
+No point fields
+
+No lagrangian fields
+
+No FA fields
+
+Time = 60
+
+Reconstructing FV fields
+
+    Reconstructing volScalarFields
+
+        k
+        nut
+        omega
+        p
+
+    Reconstructing volVectorFields
+
+        U
+        wallShearStress
+
+    Reconstructing surfaceScalarFields
+
+        phi
+
+Reconstructing point fields
+
+No point fields
+
+No lagrangian fields
+
+No FA fields
+
+Time = 70
+
+Reconstructing FV fields
+
+    Reconstructing volScalarFields
+
+        k
+        nut
+        omega
+        p
+
+    Reconstructing volVectorFields
+
+        U
+        wallShearStress
+
+    Reconstructing surfaceScalarFields
+
+        phi
+
+Reconstructing point fields
+
+No point fields
+
+No lagrangian fields
+
+No FA fields
+
+Time = 80
+
+Reconstructing FV fields
+
+    Reconstructing volScalarFields
+
+        k
+        nut
+        omega
+        p
+
+    Reconstructing volVectorFields
+
+        U
+        wallShearStress
+
+    Reconstructing surfaceScalarFields
+
+        phi
+
+Reconstructing point fields
+
+No point fields
+
+No lagrangian fields
+
+No FA fields
+
+Time = 90
+
+Reconstructing FV fields
+
+    Reconstructing volScalarFields
+
+        k
+        nut
+        omega
+        p
+
+    Reconstructing volVectorFields
+
+        U
+        wallShearStress
+
+    Reconstructing surfaceScalarFields
+
+        phi
+
+Reconstructing point fields
+
+No point fields
+
+No lagrangian fields
+
+No FA fields
+
+Time = 100
+
+Reconstructing FV fields
+
+    Reconstructing volScalarFields
+
+        k
+        nut
+        omega
+        p
+
+    Reconstructing volVectorFields
+
+        U
+        wallShearStress
+
+    Reconstructing surfaceScalarFields
+
+        phi
+
+Reconstructing point fields
+
+No point fields
+
+No lagrangian fields
+
+No FA fields
+
+Time = 110
+
+Reconstructing FV fields
+
+    Reconstructing volScalarFields
+
+        k
+        nut
+        omega
+        p
+
+    Reconstructing volVectorFields
+
+        U
+        wallShearStress
+
+    Reconstructing surfaceScalarFields
+
+        phi
+
+Reconstructing point fields
+
+No point fields
+
+No lagrangian fields
+
+No FA fields
+
+Time = 120
+
+Reconstructing FV fields
+
+    Reconstructing volScalarFields
+
+        k
+        nut
+        omega
+        p
+
+    Reconstructing volVectorFields
+
+        U
+        wallShearStress
+
+    Reconstructing surfaceScalarFields
+
+        phi
+
+Reconstructing point fields
+
+No point fields
+
+No lagrangian fields
+
+No FA fields
+
+Time = 130
+
+Reconstructing FV fields
+
+    Reconstructing volScalarFields
+
+        k
+        nut
+        omega
+        p
+
+    Reconstructing volVectorFields
+
+        U
+        wallShearStress
+
+    Reconstructing surfaceScalarFields
+
+        phi
+
+Reconstructing point fields
+
+No point fields
+
+No lagrangian fields
+
+No FA fields
+
+Time = 149
 
 Reconstructing FV fields
 

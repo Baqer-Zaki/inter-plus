@@ -9,9 +9,9 @@ Build  : _76d719d1-20220624 OPENFOAM=2206 version=2206
 Arch   : "LSB;label=32;scalar=64"
 Exec   : reconstructParMesh -constant -mergeTol 1E-06
 Date   : Dec 01 2023
-Time   : 11:59:50
+Time   : 12:38:29
 Host   : MSI
-PID    : 26799
+PID    : 2287
 I/O    : uncollated
 Case   : /home/baqer/Git-hub-OpenFoam/inter-plus/simpleFoam_kOmagaSST
 nProcs : 1

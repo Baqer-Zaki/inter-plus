@@ -57,12 +57,12 @@ SIMPLE
 	 consistent yes;
          residualControl
 	   {
-	    p               1e-2;
-	    U               1e-2;
-	    "(k|epsilon)" 1e-2;				     }
+	    p               1e-3;
+	    U               1e-3;
+	    "(k|omega)" 1e-3;				     }
 
 	  nCorrectors 1;
-	  nMaxIter 5;
+	  nMaxIter 100;
 	  nRelaxationIterations 2;
 }	  
 
