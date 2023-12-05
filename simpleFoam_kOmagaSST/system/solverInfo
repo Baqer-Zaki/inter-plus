@@ -1,0 +1,21 @@
+// ************************************************************************* //
+/*--------------------------------*- C++ -*----------------------------------*\\
+| =========                 |
+| \\\\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox |
+|  \\\\    /   O peration     | Version: 4.x |
+|   \\\\  /    A nd           | Web: www.OpenFOAM.org |
+|    \\\\/     M anipulation  |
+\\*---------------------------------------------------------------------------*/
+solverInfo
+{
+    type solverInfo;
+    libs ("libutilityFunctionObjects.so");
+    writeControl timeStep;
+    writeInterval 1;
+    enabled true;
+
+    // Names of fields to sample. Should contain above velocity field!
+    fields (p U k);
+    writeResidualFields yes;
+}
+

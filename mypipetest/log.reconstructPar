@@ -1,0 +1,119 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2206                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _76d719d1-20220624 OPENFOAM=2206 version=2206
+Arch   : "LSB;label=32;scalar=64"
+Exec   : reconstructPar
+Date   : Dec 05 2023
+Time   : 09:08:22
+Host   : MSI
+PID    : 7050
+I/O    : uncollated
+Case   : /home/baqer/Git-hub-OpenFoam/inter-plus/mypipetest
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+
+
+Reconstructing fields
+region=region0
+
+Time = 0.3
+
+Reconstructing FV fields
+
+    Reconstructing volScalarFields
+
+        Co
+        k
+        nut
+        omega
+        p
+
+    Reconstructing volVectorFields
+
+        U
+        wallShearStress
+
+    Reconstructing surfaceScalarFields
+
+        phi
+
+Reconstructing point fields
+
+No point fields
+
+No lagrangian fields
+
+No FA fields
+
+Time = 0.6
+
+Reconstructing FV fields
+
+    Reconstructing volScalarFields
+
+        Co
+        k
+        nut
+        omega
+        p
+
+    Reconstructing volVectorFields
+
+        U
+        wallShearStress
+
+    Reconstructing surfaceScalarFields
+
+        phi
+
+Reconstructing point fields
+
+No point fields
+
+No lagrangian fields
+
+No FA fields
+
+Time = 0.9
+
+Reconstructing FV fields
+
+    Reconstructing volScalarFields
+
+        Co
+        k
+        nut
+        omega
+        p
+
+    Reconstructing volVectorFields
+
+        U
+        wallShearStress
+
+    Reconstructing surfaceScalarFields
+
+        phi
+
+Reconstructing point fields
+
+No point fields
+
+No lagrangian fields
+
+No FA fields
+
+
+End
+

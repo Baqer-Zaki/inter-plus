@@ -18,6 +18,33 @@ FoamFile
 
 cdf7e925f5746741c316f5fbcf39ad0dfca90775
 {
+    residuals
+    {
+        scalar
+        {
+            Ux_initial      0.0124134;
+            Ux_final        4.27572e-06;
+            Uy_initial      0.0124905;
+            Uy_final        4.26919e-06;
+            Uz_initial      0.00486546;
+            Uz_final        4.0406e-06;
+            k_initial       0.00512108;
+            k_final         3.04464e-06;
+            p_initial       0.00634354;
+            p_final         0.000308822;
+            omega_initial   1.17683e-05;
+            omega_final     1.44667e-06;
+        }
+        label
+        {
+            Ux_iters        7;
+            Uy_iters        7;
+            Uz_iters        6;
+            k_iters         4;
+            p_iters         421;
+            omega_iters     1;
+        }
+    }
     averageWallShearStress
     {
         vector

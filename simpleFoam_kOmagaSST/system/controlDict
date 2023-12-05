@@ -29,7 +29,7 @@ deltaT          1;
 
 writeControl    timeStep;
 
-writeInterval   100;
+writeInterval   20;
 
 purgeWrite      0;
 
@@ -51,65 +51,19 @@ runTimeModifiable true;// this is to help to adjust your simulation while runnin
 functions
 
 {
-wallShearStress1
-    {
-    // Mandatory entries (unmodifiable)
-    type            wallShearStress;
-    libs            (fieldFunctionObjects);
 
-    // Optional entries (runtime modifiable)
-    patches         (wall); // (wall1 "(wall2|wall3)");
+ residuals
+ {
+     type            solverInfo;
+     libs            (utilityFunctionObjects);
+				             fields          (".*");
+					  }
 
-    // Optional (inherited) entries
-    writePrecision  8;
-    writeToFile     true;
-    useUserTime     true;
-    // region          region0;
-    enabled         true;
-    log             true;
-    // timeStart       0;
-    // timeEnd         1000;
-    executeControl  writeTime;
-    executeInterval 1;
-    writeControl    writeTime;
-    writeInterval   1;
-    }
 
-averageWallShearStress
-{
-    // Mandatory entries (unmodifiable)
-    type            surfaceFieldValue;
-    libs            (fieldFunctionObjects);
 
-    // Mandatory entries (runtime modifiable)
-    fields          (wallShearStress);
-    operation       areaAverage;
-    regionType      patch;
-    name            wall;
+#include "wallShearStress"
+#include "averageWSS"
 
-    // Optional entries (runtime modifiable)
-    // postOperation   none;
-    // weightField     alpha1;
-    // scaleFactor     1.0;
-    // writeArea       false;
-    surfaceFormat   none;
-
-    // Optional (inherited) entries
-    writeFields     true;
-    // scalingFactor   1.0;
-    // writePrecision  8;
-    // writeToFile     true;
-    // useUserTime     true;
-    // region          region0;
-    // enabled         true;
-    // log             true;
-    // timeStart       0;
-    // timeEnd         1000;
-    executeControl  writeTime;
-    executeInterval 1;
-    writeControl    writeTime;
-    writeInterval   1;
-}
 }
 
 

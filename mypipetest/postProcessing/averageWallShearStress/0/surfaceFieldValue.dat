@@ -1,0 +1,8 @@
+# Region type : patch wall
+# Faces       : 48000
+# Area        : 1.256063e-02
+# Scale factor: 1.000000e+00
+# Time        	areaAverage(wallShearStress)
+0.3           	(4.786934e-09 -2.919077e-09 -3.122796e-04)
+0.6           	(2.450642e-09 -6.329153e-09 -2.200238e-04)
+0.9           	(1.534880e-09 -8.357689e-09 -1.846498e-04)

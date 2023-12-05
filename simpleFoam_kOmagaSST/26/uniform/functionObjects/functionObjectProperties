@@ -1,0 +1,58 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2206                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    arch        "LSB;label=32;scalar=64";
+    class       dictionary;
+    location    "26/uniform/functionObjects";
+    object      functionObjectProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+cdf7e925f5746741c316f5fbcf39ad0dfca90775
+{
+    residuals
+    {
+        scalar
+        {
+            Ux_initial      0.00989977;
+            Ux_final        4.07484e-06;
+            Uy_initial      0.00998126;
+            Uy_final        4.05747e-06;
+            Uz_initial      0.00372944;
+            Uz_final        9.610430000000001e-06;
+            k_initial       0.00275055;
+            k_final         9.46313e-06;
+            p_initial       0.00522389;
+            p_final         0.00024927;
+            omega_initial   9.038709999999999e-06;
+            omega_final     9.038709999999999e-06;
+        }
+        label
+        {
+            Ux_iters        7;
+            Uy_iters        7;
+            Uz_iters        5;
+            k_iters         3;
+            p_iters         542;
+            omega_iters     0;
+        }
+    }
+    averageWallShearStress
+    {
+        vector
+        {
+            areaAverage(wall,wallShearStress) ( -2.02334e-11 -6.27528e-11 -0.000168214 );
+        }
+    }
+}
+
+
+// ************************************************************************* //

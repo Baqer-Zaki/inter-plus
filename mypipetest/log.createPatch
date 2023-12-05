@@ -1,0 +1,68 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2206                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _76d719d1-20220624 OPENFOAM=2206 version=2206
+Arch   : "LSB;label=32;scalar=64"
+Exec   : createPatch -dict system/createPatchDict_autopatch -overwrite
+Date   : Dec 05 2023
+Time   : 08:43:39
+Host   : MSI
+PID    : 6886
+I/O    : uncollated
+Case   : /home/baqer/Git-hub-OpenFoam/inter-plus/mypipetest
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+Reading "system/createPatchDict_autopatch"
+
+
+
+Adding patches to mesh region0
+
+Adding new patch topPatch from 
+{
+    type            patch;
+    nFaces          0;
+    startFace       0;
+}
+
+Adding new patch bottomPatch from 
+{
+    type            patch;
+    nFaces          0;
+    startFace       0;
+}
+
+
+
+
+Repatching mesh region0
+
+Moving faces from patch toppatch to patch 3
+Moving faces from patch wall to patch 2
+Moving faces from patch bottompatch to patch 4
+Doing topology modification to order faces.
+
+Not synchronising points.
+
+Removing patches with no faces in them.
+
+Removed zero-sized patch toppatch type wall at position 0
+Removed zero-sized patch bottompatch type wall at position 1
+
+
+Writing repatched mesh region0 to 0
+
+End
+
