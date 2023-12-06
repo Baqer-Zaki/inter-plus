@@ -1,0 +1,29 @@
+ #!/bin/sh
+cd "${0%/*}" || exit                                # Run from this directory
+. ${WM_PROJECT_DIR:?}/bin/tools/RunFunctions        # Tutorial run functions
+@@@                
+#------------------------------------------------------------------------------
+./Allclean
+
+[ -d constant/polyMesh ] || cp -rf constant/polyMesh.orig constant/polyMesh
+
+restore0Dir
+#I use the createPatch to rename the patches 
+createPatch -dict system/createPatchDict_autopatch -overwrite 
+
+touch airfoilmy.foam
+
+# we are runing potentialFoam to initilize 
+runApplication potentialFoam -writep
+# #
+ #step-1 now we will decompose parallel simpleFoam
+
+ runApplication decomposePar 
+ #Step 2 now we run our solver in parallel
+ runParallel simpleFoam 
+# this is to runthe watcher 
+
+
+ #Step 3 now we need to reconstruct
+ runApplication reconstructPar
+

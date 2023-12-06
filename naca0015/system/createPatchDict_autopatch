@@ -1,0 +1,110 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v1906                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      createPatchDict;
+}
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+// Do a synchronisation of coupled points after creation of any patches.
+// Note: this does not work with points that are on multiple coupled patches
+//       with transformations (i.e. cyclics).
+pointSync false;
+
+// Patches to create.
+patches
+(
+
+// make sure to give a new name to your patches. In this case I capitlized the first letter 
+    {
+        // Name of new patch
+        name  Inlet;
+
+        // Dictionary to construct new patch from
+        patchInfo
+        {
+            type patch;
+        }
+
+        // How to construct: either from 'patches' or 'set'
+        constructFrom patches;
+
+        // If constructFrom = patches : names of patches. Wildcards allowed.
+        patches ( inlet);
+
+        // If constructFrom = set : name of faceSet
+        set  inlet;
+    }
+
+// make sure to give a new name to your patches. In this case I capitlized the first letter 
+    {
+        // Name of new patch
+        name  Walls;
+
+        // Dictionary to construct new patch from
+        patchInfo
+        {
+            type wall;
+        }
+
+        // How to construct: either from 'patches' or 'set'
+        constructFrom patches;
+
+        // If constructFrom = patches : names of patches. Wildcards allowed.
+        patches ( walls);
+
+        // If constructFrom = set : name of faceSet
+        set  walls;
+    }
+// make sure to give a new name to your patches. In this case I capitlized the first letter 
+    {
+        // Name of new patch
+        name Outlet;
+
+        // Dictionary to construct new patch from
+        patchInfo
+        {
+            type patch;
+        }
+
+        // How to construct: either from 'patches' or 'set'
+        constructFrom patches;
+
+        // If constructFrom = patches : names of patches. Wildcards allowed.
+        patches (outlet);
+
+        // If constructFrom = set : name of faceSet
+        set outlet;
+    }
+// make sure to give a new name to your patches. In this case I capitlized the first letter 
+{
+        // Name of new patch
+        name Frontandback;
+
+        // Dictionary to construct new patch from
+        patchInfo
+        {
+            type empty;
+        }
+
+        // How to construct: either from 'patches' or 'set'
+        constructFrom patches;
+
+        // If constructFrom = patches : names of patches. Wildcards allowed.
+        patches (frontandback);
+
+        // If constructFrom = set : name of faceSet
+        set frontandback;
+    }
+);
+
+// ************************************************************************* //
