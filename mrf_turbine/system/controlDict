@@ -9,38 +9,51 @@ FoamFile
 {
     version     2.0;
     format      ascii;
-    class       volVectorField;
-    object      U;
+    class       dictionary;
+    location    "system";
+    object      controlDict;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-dimensions      [0 1 -1 0 0 0 0];
+application     simpleFoam;
 
-internalField   uniform (88.6 0 0);
+startFrom       latestTime;
 
-boundaryField
+startTime       0;
+
+stopAt          endTime;
+
+endTime         5000;
+
+deltaT          1;
+
+writeControl    timeStep;
+
+writeInterval   20;
+
+purgeWrite      0;
+
+writeFormat     ascii;
+
+writePrecision  6;
+
+writeCompression off;
+
+timeFormat      general;
+
+timePrecision   6;
+
+runTimeModifiable true;// this is to help to adjust your simulation while running 
+
+
+
+functions
+
 {
-    Inlet
-    {
-        type            freestreamVelocity;
-        freestreamValue $internalField;
-    }
 
-    Outlet
-    {
-        type            freestreamVelocity;
-        freestreamValue $internalField;
-    }
 
-    Walls
-    {
-        type            noSlip;
-    }
 
-    FrontAndBack
-    {
-        type            empty;
-    }
 }
+
 
 // ************************************************************************* //

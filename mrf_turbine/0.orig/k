@@ -9,32 +9,32 @@ FoamFile
 {
     version     2.0;
     format      ascii;
-    class       volVectorField;
-    object      U;
+    class       volScalarField;
+    location    "0";
+    object      k;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-dimensions      [0 1 -1 0 0 0 0];
+dimensions      [0 2 -2 0 0 0 0];
 
-internalField   uniform (88.6 0 0);
+internalField   uniform 3.75e-5;
 
 boundaryField
 {
-    Inlet
-    {
-        type            freestreamVelocity;
-        freestreamValue $internalField;
-    }
-
     Outlet
     {
-        type            freestreamVelocity;
-        freestreamValue $internalField;
+        type            zeroGradient;
     }
-
     Walls
     {
-        type            noSlip;
+        type            kqRWallFunction;
+        value           $internalField;
+    }
+    Inlet
+    {
+      type            turbulentIntensityKineticEnergyInlet;
+      intensity       0.05;
+	value		$internalField;
     }
 
     FrontAndBack
@@ -42,5 +42,6 @@ boundaryField
         type            empty;
     }
 }
+
 
 // ************************************************************************* //

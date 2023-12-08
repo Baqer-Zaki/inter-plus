@@ -9,38 +9,14 @@ FoamFile
 {
     version     2.0;
     format      ascii;
-    class       volVectorField;
-    object      U;
+    class       dictionary;
+    location    "constant";
+    object      transportProperties;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+transportModel  Newtonian;
 
-dimensions      [0 1 -1 0 0 0 0];
+nu              1.0e-6;
 
-internalField   uniform (88.6 0 0);
-
-boundaryField
-{
-    Inlet
-    {
-        type            freestreamVelocity;
-        freestreamValue $internalField;
-    }
-
-    Outlet
-    {
-        type            freestreamVelocity;
-        freestreamValue $internalField;
-    }
-
-    Walls
-    {
-        type            noSlip;
-    }
-
-    FrontAndBack
-    {
-        type            empty;
-    }
-}
 
 // ************************************************************************* //
