@@ -5,11 +5,11 @@ cd "${0%/*}" || exit                                # Run from this directory
 #------------------------------------------------------------------------------
 ./Allclean
 
-fluent3DMeshToFoam turbine_mesh.msh
+fluent3DMeshToFoam turbine_confirmal.msh
 
 restore0Dir
 #I use the createPatch to rename the patches 
-createPatch -dict system/createPatchDict_autopatch -overwrite 
+#createPatch -dict system/createPatchDict_autopatch -overwrite 
 
 touch turbine.foam
 

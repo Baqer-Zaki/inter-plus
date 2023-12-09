@@ -17,29 +17,42 @@ FoamFile
 
 dimensions      [0 2 -1 0 0 0 0];
 
-internalField   uniform 0;
+internalField   uniform 1e-5;
 
 boundaryField
 {
-    Outlet
+    outlet
     {
-         type            calculated;
-	 value           $internalField;
+          type            zeroGradient;
     }
-    Walls
+    inlet
+    {
+         type            zeroGradient;
+    }
+    wall-solid
     {
         type            nutUWallFunction;
        value           $internalField;
     }
-    Inlet
+    turbine
     {
-        type            calculated;
+        type            nutkWallFunction;
+        value           $internalField;
+
+    }
+
+    AMI1
+    {
+        type            cyclicAMI;
         value           $internalField;
     }
-FrontAndBack
+
+    AMI2
     {
-        type            empty;
+        type            cyclicAMI;
+        value           $internalField;
     }
+
 }
 
 

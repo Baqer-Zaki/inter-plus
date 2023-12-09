@@ -9,56 +9,23 @@ FoamFile
 {
     version     2.0;
     format      ascii;
-    class       volVectorField;
-    object      U;
+    class       dictionary;
+    location    "constant";
+    object      turbulenceProperties;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-dimensions      [0 1 -1 0 0 0 0];
+simulationType  RAS;
 
-internalField   uniform (-0.1 0 0);
-
-boundaryField
+RAS
 {
-    inlet
-    {
-        type            freestreamVelocity;
-        freestreamValue $internalField;
-    }
+    RASModel        kOmegaSST;
 
-    outlet
-    {
-        type            freestreamVelocity;
-        freestreamValue $internalField;
-    }
+    turbulence      on;
 
-    wall-solid
-    {
-     type            noSlip;
-    }
-    
-    turbine
-    {
-       type            movingWallVelocity;
-       value           uniform (0 0 0);
-
-    }
-
-
-
-   AMI1
-    {
-        type            cyclicAMI;
-        value           uniform (0 0 0);
-    }
-
-    AMI2
-    {
-        type            cyclicAMI;
-        value           uniform (0 0 0);
-    } 
-
-
+    printCoeffs     on;
+    //alphak1  500;
 }
+
 
 // ************************************************************************* //

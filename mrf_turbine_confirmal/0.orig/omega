@@ -4,59 +4,50 @@
 |  \\    /   O peration     | Version:  v1812                                 |
 |   \\  /    A nd           | Web:      www.OpenFOAM.com                      |
 |    \\/     M anipulation  |                                                 |
-\*----------------------------------:-----------------------------------------*/
+\*---------------------------------------------------------------------------*/
 FoamFile
 {
     version     2.0;
     format      ascii;
     class       volScalarField;
-    object      p;
+    location    "0";
+    object      omega;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-dimensions      [0 2 -2 0 0 0 0];
+dimensions      [0 0 -1 0 0 0 0];
 
-internalField   uniform 0;
+internalField   uniform 0.1;
 
 boundaryField
 {
-    inlet
-    {
-        type            freestreamPressure;
-        freestreamValue $internalField;
-    }
-
-     outlet
-    {
-         type            fixedValue;
-        value           uniform 0;
-    }
-
-     wall-solid
+    outlet
     {
         type            zeroGradient;
     }
-
-     turbine
+    inlet
     {
-
-     type            zeroGradient;
+       type            turbulentMixingLengthFrequencyInlet;
+        mixingLength    1.2;
+       value           $internalField;
     }
 
-    AMI1
+     wall-part-solid
     {
-        type            cyclicAMI;
-        value           uniform 0;
+        type            omegaWallFunction;
+        value           $internalField;
     }
 
-    AMI2
+    turbine
     {
-        type            cyclicAMI;
-        value           uniform 0;
+        type            omegaWallFunction;
+        value           $internalField;
+
     }
 
    
 
 }
+
 
 // ************************************************************************* //

@@ -4,59 +4,47 @@
 |  \\    /   O peration     | Version:  v1812                                 |
 |   \\  /    A nd           | Web:      www.OpenFOAM.com                      |
 |    \\/     M anipulation  |                                                 |
-\*----------------------------------:-----------------------------------------*/
+\*---------------------------------------------------------------------------*/
 FoamFile
 {
     version     2.0;
     format      ascii;
     class       volScalarField;
-    object      p;
+    location    "0";
+    object      k;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
 dimensions      [0 2 -2 0 0 0 0];
 
-internalField   uniform 0;
+internalField   uniform 3.7e-5;
 
 boundaryField
 {
-    inlet
-    {
-        type            freestreamPressure;
-        freestreamValue $internalField;
-    }
-
-     outlet
-    {
-         type            fixedValue;
-        value           uniform 0;
-    }
-
-     wall-solid
+    outlet
     {
         type            zeroGradient;
     }
-
+    inlet
+    {
+      type            turbulentIntensityKineticEnergyInlet;
+      intensity       0.05;
+	  value		       $internalField;
+    }
+     wall-part-solid
+    {
+    type            kqRWallFunction;
+     value           $internalField;
+    }
+    
      turbine
     {
+        type            kqRWallFunction;
+        value           $internalField;
 
-     type            zeroGradient;
     }
-
-    AMI1
-    {
-        type            cyclicAMI;
-        value           uniform 0;
-    }
-
-    AMI2
-    {
-        type            cyclicAMI;
-        value           uniform 0;
-    }
-
-   
-
+    
 }
+
 
 // ************************************************************************* //

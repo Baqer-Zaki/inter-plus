@@ -1,0 +1,6 @@
+Bring the mesh from paraview folder in UNSW folder in the D: 
+
+it is called: 
+turbine_confirmal
+
+I did this becuase i want to push on GitHub

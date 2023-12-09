@@ -9,56 +9,54 @@ FoamFile
 {
     version     2.0;
     format      ascii;
-    class       volVectorField;
-    object      U;
+    class       dictionary;
+    location    "system";
+    object      fvSchemes;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-dimensions      [0 1 -1 0 0 0 0];
-
-internalField   uniform (-0.1 0 0);
-
-boundaryField
+ddtSchemes
 {
-    inlet
-    {
-        type            freestreamVelocity;
-        freestreamValue $internalField;
-    }
+    default         steadyState;
+}
 
-    outlet
-    {
-        type            freestreamVelocity;
-        freestreamValue $internalField;
-    }
+gradSchemes
+{
+    default         Gauss linear;
+   
+}
 
-    wall-solid
-    {
-     type            noSlip;
-    }
-    
-    turbine
-    {
-       type            movingWallVelocity;
-       value           uniform (0 0 0);
+divSchemes
+{
+    default         none;
+    div(phi,U)      Gauss linear;
+    turbulence      bounded Gauss upwind;
+    div(phi,k)      Gauss limitedLinear 1;
+    div(phi,omega)  Gauss limitedLinear 1;
+    div(phi,R)      Gauss limitedLinear 1;
+    div(R)          Gauss linear;
+    div(phi,nuTilda) Gauss limitedLinear 1;
+    div((nuEff*dev2(T(grad(U))))) Gauss linear;
+}
 
-    }
+laplacianSchemes
+{
+    default         Gauss linear corrected;
+}
 
+interpolationSchemes
+{
+    default         linear;
+}
 
+snGradSchemes
+{
+    default         corrected;
+}
 
-   AMI1
-    {
-        type            cyclicAMI;
-        value           uniform (0 0 0);
-    }
-
-    AMI2
-    {
-        type            cyclicAMI;
-        value           uniform (0 0 0);
-    } 
-
-
+wallDist
+{
+	    method meshWave;
 }
 
 // ************************************************************************* //

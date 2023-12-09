@@ -9,39 +9,50 @@ FoamFile
 {
     version     2.0;
     format      ascii;
-    class       volScalarField;
-    location    "0";
-    object      epsilon;
+    class       dictionary;
+    location    "system";
+    object      controlDict;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-dimensions      [0 2 -3 0 0 0 0];
+application     simpleFoam;
 
-internalField   uniform 5.39e-7;
+startFrom       latestTime;
 
-boundaryField
+startTime       0;
+
+stopAt          endTime;
+
+endTime         600;
+
+deltaT          1;
+
+writeControl    timeStep;
+
+writeInterval   50;
+
+purgeWrite      0;
+
+writeFormat     ascii;
+
+writePrecision  6;
+
+writeCompression off;
+
+timeFormat      general;
+
+timePrecision   6;
+
+runTimeModifiable true;// this is to help to adjust your simulation while running 
+
+
+
+functions
+
 {
-    Inlet
-    {
-        type            freestreamPressure;
-        freestreamValue $internalField;
-    }
+#include "forces" 
+#include "forceCoeffs"
 
-    Outlet
-    {
-        type            freestreamPressure;
-        freestreamValue $internalField;
-    }
-
-    Walls
-    {
-        type            zeroGradient;
-    }
-
-    FrontAndBack
-    {
-        type            empty;
-    }
 }
 
 

@@ -17,33 +17,48 @@ FoamFile
 
 dimensions      [0 0 -1 0 0 0 0];
 
-internalField   uniform 88.6;
+internalField   uniform 0.1;
 
 boundaryField
 {
-    Outlet
+    outlet
     {
         type            zeroGradient;
     }
+    inlet
+    {
+       type            turbulentMixingLengthFrequencyInlet;
+        mixingLength    1.2;
+       value           $internalField;
+    }
 
-    Walls
+    wall-solid
     {
         type            omegaWallFunction;
         value           $internalField;
     }
 
-    Inlet
+    turbine
     {
-       type            turbulentMixingLengthFrequencyInlet;
-        mixingLength    7e-4;
-       value           $internalField;
+        type            omegaWallFunction;
+        value           $internalField;
 
     }
 
-    FrontAndBack
+   AMI1
     {
-        type            empty;
+        type            cyclicAMI;
+        value           $internalField;
     }
+
+    AMI2
+    {
+        type            cyclicAMI;
+        value           $internalField;
+    }
+
+
+
 }
 
 

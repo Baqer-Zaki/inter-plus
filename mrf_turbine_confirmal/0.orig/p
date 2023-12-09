@@ -32,7 +32,7 @@ boundaryField
         value           uniform 0;
     }
 
-     wall-solid
+     wall-part-solid
     {
         type            zeroGradient;
     }
@@ -43,18 +43,7 @@ boundaryField
      type            zeroGradient;
     }
 
-    AMI1
-    {
-        type            cyclicAMI;
-        value           uniform 0;
-    }
-
-    AMI2
-    {
-        type            cyclicAMI;
-        value           uniform 0;
-    }
-
+    
    
 
 }

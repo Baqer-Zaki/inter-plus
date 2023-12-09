@@ -17,30 +17,44 @@ FoamFile
 
 dimensions      [0 2 -2 0 0 0 0];
 
-internalField   uniform 3.75e-5;
+internalField   uniform 3.7e-5;
 
 boundaryField
 {
-    Outlet
+    outlet
     {
         type            zeroGradient;
     }
-    Walls
-    {
-        type            kqRWallFunction;
-        value           $internalField;
-    }
-    Inlet
+    inlet
     {
       type            turbulentIntensityKineticEnergyInlet;
       intensity       0.05;
-	value		$internalField;
+	  value		       $internalField;
+    }
+    wall-solid
+    {
+    type            kqRWallFunction;
+     value           $internalField;
+    }
+    
+   turbine
+    {
+        type            kqRWallFunction;
+        value           $internalField;
+
+    }
+    AMI1
+    {
+        type            cyclicAMI;
+        value           $internalField;
     }
 
-    FrontAndBack
+    AMI2
     {
-        type            empty;
+        type            cyclicAMI;
+        value           $internalField;
     }
+    
 }
 
 
